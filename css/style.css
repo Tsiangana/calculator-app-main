@@ -1,0 +1,273 @@
+
+:root{
+
+    /*### Theme 1
+
+#### Backgrounds*/
+
+--Very_dark_desaturated_blue_main_background: hsl(222, 26%, 31%);
+--Very_dark_desaturated_blue_toggle_background_keypad_background: hsl(223, 31%, 20%);
+--Very_dark_desaturated_blue_screen_background: hsl(224, 36%, 15%);
+
+/*#### Keys*/
+
+--Desaturated_dark_blue_key_background: hsl(225, 21%, 49%);
+--Desaturated_dark_bluek_ey_shadow: hsl(224, 28%, 35%);
+
+--Red_key_background_toggle: hsl(6, 63%, 50%);
+--Dark_red_key_shadow: hsl(6, 70%, 34%);
+
+--Light_grayish_orange_key_background: hsl(30, 25%, 89%);
+--Grayish_orange_key_shadow: hsl(28, 16%, 65%);
+
+/*#### Text*/
+
+--Very_dark_grayish_blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+/*### Theme 2
+
+#### Backgrounds*/
+
+--Light_gray_main_background: hsl(0, 0%, 90%);
+--Grayish_red_toggle_background_keypad_background: hsl(0, 5%, 81%);
+--Very_light_gray_screen_background: hsl(0, 0%, 93%);
+
+/*#### Keys*/
+
+--Dark_moderate_cyan_key_background: hsl(185, 42%, 37%);
+--Very_dark_cyan_key_shadow: hsl(185, 58%, 25%);
+
+--Orange_key_background_toggle: hsl(25, 98%, 40%);
+--Dark_orange_key_shadow: hsl(25, 99%, 27%);
+
+--Light_grayish_yellow_key_background: hsl(45, 7%, 89%);
+--Dark_grayish_orange_key_shadow: hsl(35, 11%, 61%);
+
+/*#### Text*/
+
+--Very_dark_grayish_yellow: hsl(60, 10%, 19%);
+--White_text: hsl(0, 0%, 100%);
+
+/*### Theme 3
+
+#### Backgrounds*/
+
+--Very_dark_violet_main_background: hsl(268, 75%, 9%);
+--Very_dark_violet_toggle_background_keypad_background_screen_background: hsl(268, 71%, 12%);
+
+/*#### Keys*/
+
+--Dark_violet_key_background: hsl(281, 89%, 26%);
+--Vivid_magenta_key_shadow: hsl(285, 91%, 52%);
+
+--Pure_cyan_key_background_toggle: hsl(176, 100%, 44%);
+--Soft_cyan_key_shadow: hsl(177, 92%, 70%);
+
+--Very_dark_violet_key_background: hsl(268, 47%, 21%);
+--Dark_magenta_key_shadow: hsl(290, 70%, 36%);
+
+/*#### Text*/
+
+--Light_yellow: hsl(52, 100%, 62%);
+--Very_dark_blue: hsl(198, 20%, 13%);
+--White_text: hsl(0, 0%, 100%);
+
+/*## Typography
+
+### Body Copy*/
+
+--Font_size_numbers: 32px;
+--border: 1px solid red;
+--box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    /* Inicio de tudo */
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--Very_dark_desaturated_blue_main_background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calculator{
+        width: 410px;
+        height: 500px;
+        /*border: var(--border);*/
+        display: block;
+        padding: 10px;
+    }
+
+    /* inicio da nav */
+    .calculator .nav-bar{
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        padding: 5px;
+        /*border: var(--border);*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        padding: 0 0 0 20px;
+    }
+    .calculator .nav-bar h1{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: -18px;
+    }
+    .calculator .nav-bar .text{
+        font-size: 10px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        margin-bottom: -18px;
+    }
+    .calculator .nav-bar .sub-bar{
+        display: flex;
+    }
+    .calculator .nav-bar .radio-content{
+        display: block;
+    }
+    .calculator .nav-bar .radio-content .numbers span{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    .calculator .nav-bar .radio-content .radio{
+        padding: 0 2px;
+        box-shadow: var(--box-shadow);
+        background-color: var(--Very_dark_desaturated_blue_toggle_background_keypad_background);
+        border-radius: 50px;
+    }
+    .radio-button-container {
+        display: flex;
+        align-items: center;
+        /*gap: 2px;*/
+      }
+      
+      .radio-button {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .radio-button__input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .radio-button__label {
+        display: inline-block;
+        padding-left: 21px;
+        margin-right: -5px;
+        margin-bottom: 13px;
+        position: relative;
+        font-size: 10px;
+        color: #f2f2f2;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+      
+      .radio-button__custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        /*border: 2px solid #555;*/
+        transition: all 0.3s ease;
+      }
+      
+      .radio-button__input:checked + .radio-button__label .radio-button__custom {
+        background-color: hsl(6, 63%, 50%);
+        border-color: transparent;
+        transform: scale(0.8);
+        box-shadow: 0 0 20px hsl(6, 63%, 50%);
+      }
+      
+      .radio-button__input:checked + .radio-button__label {
+        color: hsl(6, 63%, 50%);
+      }
+      
+      .radio-button__label:hover .radio-button__custom {
+        transform: scale(1.2);
+        border-color: hsl(6, 63%, 50%);
+        box-shadow: 0 0 20px hsl(6, 63%, 50%);
+      }
+            
+    /* fim da nav */
+
+
+    /* inicio da header */
+    .calculator .output-reader{
+        width: 100%;
+        height: 90px;
+        margin-bottom: 10px;
+        /*border: var(--border);*/
+    }
+    .calculator .pelicula{
+        width: 390px;
+        height: 90px;
+        position: absolute;
+        z-index: 5;
+        background-color: #ffffff00;
+    }
+    .calculator .output-reader input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: hsl(224, 36%, 15%);
+        box-shadow: var(--box-shadow);
+        border-radius: 15px;
+        color: #fff;
+        padding: 20px;
+        text-align: right;
+        font-size: 60px;
+        font-weight: 600;
+    }
+    .calculator .output-reader input:active{
+        border: none;
+    }
+    /* fim da header */
+
+
+    /* inicio da main */
+    .calculator .content{
+        width: 100%;
+        height: 310px;
+        margin-bottom: 10px;
+        /*border: var(--border);*/
+        background-color: hsl(223, 31%, 20%);
+        border-radius: 15px;
+        box-shadow: var(--box-shadow);
+        padding: 10px;
+        position: relative;
+        display: flex;
+    }
+    .calculator .content .num{
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        background-color: #fff;
+    }
+
+    /* fim da main */
+
+
