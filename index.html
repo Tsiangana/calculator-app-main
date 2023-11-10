@@ -12,22 +12,22 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="container">
       <div class="calculator">
         <nav class="nav-bar">
-          <div><h1>calc</h1></div>
+          <div><h1 id="color">calc</h1></div>
           <div class="sub-bar">
-            <div class="text"><span>THEME</span></div>
+            <div class="text"><span id="color1">THEME</span></div>
             <div class="radio-content">
               <div class="numbers">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+                <span id="color">1</span>
+                <span id="color">2</span>
+                <span id="color">3</span>
               </div>
               <div class="radio">
                 <div class="radio-button-container">
                   <div class="radio-button">
-                  <input type="radio" class="radio-button__input" id="radio1" active="" name="radio-group">
+                  <input type="radio" class="radio-button__input" id="radio1" checked="" name="radio-group">
                   <label class="radio-button__label" for="radio1" active="">
                     <span class="radio-button__custom"></span>
                   </label>
@@ -50,38 +50,38 @@
           </div>
         </nav>
         <form class="calculator" name="calc">
-          <header class="output-reader">
+          <header class="output-reader" id="color">
             <div class="pelicula"></div>
-            <input type="text" readonly class="value" name="txt">
+            <input type="text" readonly class="value" name="txt" id="visor">
           </header>
-          <main class="content">
+          <main class="content" id="keypad">
             <div class="num-container">
-              <div class="num" onclick="document.calc.txt.value +='7' ">7</div>
-              <div class="num" onclick="document.calc.txt.value +='8' ">8</div>
-              <div class="num" onclick="document.calc.txt.value +='9' ">9</div>
-              <div class="num clear clean1" onclick="calc.txt.value = '' ">DEL</div>
+              <div class="num colort" onclick="document.calc.txt.value +='7' " id="b1">7</div>
+              <div class="num colort" onclick="document.calc.txt.value +='8' " id="b2">8</div>
+              <div class="num colort" onclick="document.calc.txt.value +='9' " id="b3">9</div>
+              <div class="num clear clean1 colort" onclick="calc.txt.value = '' " id="button1">DEL</div>
             </div>
             <div class="num-container">
-              <div class="num" onclick="document.calc.txt.value +='4' ">4</div>
-              <div class="num" onclick="document.calc.txt.value +='5' ">5</div>
-              <div class="num" onclick="document.calc.txt.value +='6' ">6</div>
-              <div class="num plues" onclick="document.calc.txt.value +='+' ">+</div>
+              <div class="num colort" onclick="document.calc.txt.value +='4' " id="b4">4</div>
+              <div class="num colort" onclick="document.calc.txt.value +='5' " id="b5">5</div>
+              <div class="num colort" onclick="document.calc.txt.value +='6' " id="b6">6</div>
+              <div class="num plues colort" onclick="document.calc.txt.value +='+' " id="b0">+</div>
             </div>
             <div class="num-container">
-              <div class="num" onclick="document.calc.txt.value +='1' ">1</div>
-              <div class="num" onclick="document.calc.txt.value +='2' ">2</div>
-              <div class="num" onclick="document.calc.txt.value +='3' ">3</div>
-              <div class="num" onclick="document.calc.txt.value +='-' ">-</div>
+              <div class="num colort" onclick="document.calc.txt.value +='1' " id="b7">1</div>
+              <div class="num colort" onclick="document.calc.txt.value +='2' " id="b8">2</div>
+              <div class="num colort" onclick="document.calc.txt.value +='3' " id="b9">3</div>
+              <div class="num colort" onclick="document.calc.txt.value +='-' " id="b10">-</div>
             </div>
             <div class="num-container">
-              <div class="num" onclick="document.calc.txt.value +='.' ">.</div>
-              <div class="num" onclick="document.calc.txt.value +='0' ">0</div>
-              <div class="num" onclick="document.calc.txt.value +='/' ">/</div>
-              <div class="num" onclick="document.calc.txt.value +='*' ">x</div>
+              <div class="num colort" onclick="document.calc.txt.value +='.' " id="b11">.</div>
+              <div class="num colort" onclick="document.calc.txt.value +='0' " id="b12">0</div>
+              <div class="num colort" onclick="document.calc.txt.value +='/' " id="b13">/</div>
+              <div class="num colort" onclick="document.calc.txt.value +='*' " id="b14">x</div>
             </div>
             <div class="num-container">
-              <div class="num clear clean2" onclick="calc.txt.value = '' ">RESET</div>
-              <div class="num equal" onclick="document.calc.txt.value =eval(calc.txt.value) ">=</span>
+              <div class="num clear clean2" onclick="calc.txt.value = '' " id="button2">RESET</div>
+              <div class="num equal" onclick="document.calc.txt.value =eval(calc.txt.value) " id="button3">=</span>
             </div>
           </main>
         </form>
